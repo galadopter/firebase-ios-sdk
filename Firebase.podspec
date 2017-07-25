@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name             = 'FirebaseCommunity'
+  s.name             = 'Firebase'
   s.version          = '0.0.1'
   s.summary          = 'Firebase Open Source Libraries for iOS.'
 
@@ -30,7 +30,7 @@ Firebase Development CocoaPod including experimental and community supported fea
     sp.source_files = 'Firebase/Core/**/*.[mh]'
     sp.public_header_files = 'Firebase/Core/Public/*.h'
     sp.dependency 'GoogleToolboxForMac/NSData+zlib', '~> 2.1'
-    sp.dependency 'FirebaseCommunity/Root'
+    sp.dependency 'Firebase/Root'
   end
 
   s.subspec 'Auth' do |sp|
@@ -51,7 +51,7 @@ Firebase Development CocoaPod including experimental and community supported fea
       ' -DFIRAuth_MINOR_VERSION=' + s.version.to_s.split(".")[0] + "." + s.version.to_s.split(".")[1]
     }
     sp.framework = 'Security'
-    sp.dependency 'FirebaseCommunity/Core'
+    sp.dependency 'Firebase/Core'
     sp.dependency 'GTMSessionFetcher/Core', '~> 1.1'
     sp.dependency 'GoogleToolboxForMac/NSDictionary+URLArguments', '~> 2.1'
   end
@@ -67,7 +67,7 @@ Firebase Development CocoaPod including experimental and community supported fea
     sp.framework = 'Security'
     sp.framework = 'SystemConfiguration'
     sp.dependency 'leveldb-library'
-    sp.dependency 'FirebaseCommunity/Core'
+    sp.dependency 'Firebase/Core'
     sp.xcconfig = { 'OTHER_CFLAGS' => '-DFIRDatabase_VERSION=' + s.version.to_s }
   end
 
@@ -85,7 +85,7 @@ Firebase Development CocoaPod including experimental and community supported fea
     }
     sp.framework = 'AddressBook'
     sp.framework = 'SystemConfiguration'
-    sp.dependency 'FirebaseCommunity/Core'
+    sp.dependency 'Firebase/Core'
     sp.dependency 'GoogleToolboxForMac/Logger', '~> 2.1'
     sp.dependency 'Protobuf', '~> 3.1'
   end
@@ -95,7 +95,7 @@ Firebase Development CocoaPod including experimental and community supported fea
     sp.public_header_files = 'Firebase/Storage/Public/*.h'
     sp.ios.framework = 'MobileCoreServices'
     sp.osx.framework = 'CoreServices'
-    sp.dependency 'FirebaseCommunity/Core'
+    sp.dependency 'Firebase/Core'
     sp.dependency 'GTMSessionFetcher/Core', '~> 1.1'
     sp.xcconfig = { 'OTHER_CFLAGS' => '-DFIRStorage_VERSION=' + s.version.to_s }
   end
